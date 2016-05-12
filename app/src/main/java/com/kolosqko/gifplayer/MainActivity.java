@@ -1,16 +1,16 @@
 
 package com.kolosqko.gifplayer;
 
-        import android.app.Activity;
+        import android.app.TabActivity;
+        import android.content.Intent;
         import android.os.Bundle;
-        import android.view.View;
-        import android.widget.TabHost;
-        import android.widget.TabHost.OnTabChangeListener;
-        import android.widget.Toast;
+import android.widget.TabHost;
 
-public class MainActivity extends Activity {
+public class MainActivity extends TabActivity {
+
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -21,12 +21,12 @@ public class MainActivity extends Activity {
 
         tabSpec = tabHost.newTabSpec("tag1");
         tabSpec.setIndicator("Favorites");
-        tabSpec.setContent(R.id.tvTab1);
+        tabSpec.setContent(new Intent(this, ListFavorites.class));
         tabHost.addTab(tabSpec);
 
         tabSpec = tabHost.newTabSpec("tag2");
         tabSpec.setIndicator("Add New Gif");
-        tabSpec.setContent(R.id.tvTab2);
+        tabSpec.setContent(R.id.tvTab);
         tabHost.addTab(tabSpec);
 
 
