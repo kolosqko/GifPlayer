@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GifPlayer</string>
+    <string name="text_tab1">Favorites</string>
+    <string name="text_tab2">NewGif</string>
 </resources>
