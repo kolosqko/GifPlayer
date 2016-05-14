@@ -26,7 +26,7 @@ public class MainActivity extends TabActivity {
 
         tabSpec = tabHost.newTabSpec("tag2");
         tabSpec.setIndicator("Add New Gif");
-        tabSpec.setContent(new Intent(this, GifPlayer.class));
+        tabSpec.setContent(R.id.tvTab);
         tabHost.addTab(tabSpec);
 
 
