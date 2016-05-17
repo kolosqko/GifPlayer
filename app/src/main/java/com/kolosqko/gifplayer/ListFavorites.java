@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 public class ListFavorites extends Activity implements AdapterView.OnItemClickListener {
 
     String[] gif_names ={"first", "second"};
-    String[] gif_urls ={"https://media.giphy.com/media/N35rW3vRNeaDC/giphy.gif", "https://media4.giphy.com/media/u2NvKgLW1W7Wo/200.gif"};
+    String[] gif_urls ={"https://media.giphy.com/media/N35rW3vRNeaDC/giphy.gif", "https://media.giphy.com/media/lSuhT1XP7eZ4Q/giphy.gif"};
 
     protected void onCreate(Bundle savedInstantState){
 
@@ -35,5 +35,6 @@ public class ListFavorites extends Activity implements AdapterView.OnItemClickLi
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent = new Intent(this, GifPlayer.class);
             startActivity(intent);
+
     }
 }
