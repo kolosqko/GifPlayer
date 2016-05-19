@@ -2,6 +2,7 @@ package com.kolosqko.gifplayer;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 
@@ -19,7 +20,9 @@ public class GifPlayer extends Activity{
 
     protected void onCreate(Bundle savedInstantState){
         super.onCreate(savedInstantState);
-        GifWebView view = new GifWebView(this,"https://media.giphy.com/media/lSuhT1XP7eZ4Q/giphy.gif");
+        Intent intent = getIntent();
+        url = intent.getStringExtra("url");
+        GifWebView view = new GifWebView(this,url);
         setContentView(view);
     }
 }

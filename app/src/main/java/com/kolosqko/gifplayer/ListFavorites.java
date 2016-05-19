@@ -33,8 +33,9 @@ public class ListFavorites extends Activity implements AdapterView.OnItemClickLi
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(this, GifPlayer.class);
-            startActivity(intent);
+        Intent intent = new Intent(this, GifPlayer.class);
+        intent.putExtra("url",gif_urls[position]);
+        startActivity(intent);
 
     }
 }
